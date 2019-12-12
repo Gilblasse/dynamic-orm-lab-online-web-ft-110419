@@ -44,7 +44,6 @@ class InteractiveRecord
   end
   
   def self.find_by(options={})
-    binding.pry
     sql = <<-SQL
       SELECT * FROM #{self.table_name} WHERE #{options.first[0]} = '#{options.first[1]}'
     SQL
